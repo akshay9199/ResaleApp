@@ -1,0 +1,131 @@
+<div >
+<nav class="navbar navbar-inverse navbar-fixed-top navbar-collapse" style=" border-radius:10px">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+ 
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse">
+      
+      <form class="navbar-form navbar-left">
+           
+            <button ui-sref="homepage.post" class="btn  btn-responsive btn-lg btn-info"> Post Ads</button>
+            <input type="text" placeholder="Search Category" ng-model="data.category">
+      </form>
+      <ul class="nav navbar-nav navbar-right">
+      
+     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      
+      <ul class="nav navbar-nav navbar-right">
+        <li class="dropdown">
+          <span class="caret dropdown-toogle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"  class="img-circle img-responsive" style="width:40px;height:40px;border-radius:40%"><img src="{{data.$rootScope.gather.user.imageUrl}}" style="width:40px;height:40px;border-radius:40%"></span>
+          <ul class="dropdown-menu">
+            <li><a ui-sref="homepage.profile">Profile</a></li>
+            <li role="separator" class="divider"></li>
+            <li ng-controller="Welcome as w"><a ng-click="w.logout()">Logout</a></li>
+          
+        
+        </li><li></li>
+      </ul>
+
+      <ul class="nav navbar-nav">
+        <li class="dropdown">
+          <a ui-sref="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Support<span class="caret"></span></a>
+          <ul class="dropdown-menu ">
+            <li><a href="#">About us</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">Help</a></li>
+            
+          </ul>
+        </li>
+      </ul>
+    </div>
+    </li>   
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+
+      <!-- end navbar top -->
+        <!-- navbar side -->
+        <nav class=" navbar navbar-default navbar-static-side" style="width:17%;position:fixed;height:90%;overflow:scroll;" role="navigation">
+            <!-- sidebar-collapse -->
+            <div>
+                <!-- side-menu -->
+                <ul class="nav" id="side-menu">
+                    <li>
+                        <a ui-sref="homepage.categories" ui-sref-active="active" ng-click="data.menu.selected='' ">All Categories</a>
+                    </li>
+                    <li>
+                        <a ui-sref="homepage.categories" ng-click="data.menu.selected ='Mobiles'"><i class="fa fa-mobile fa-fw" ></i> Mobiles<span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li>
+                                <a ui-sref="homepage.categories" ng-click="data.menu.selected='Mobile:Android'">Android</a>
+                            </li>
+                            <li>
+                                <a ui-sref="homepage.categories" ng-click="data.menu.selected='Mobile:Windows'">Windows</a>
+                            </li>
+                        </ul>
+                        <!-- second-level-items -->
+                    </li>
+                    <li>
+                        <a ui-sref="homepage.categories" ng-click="data.menu.selected='Books'"><i class="fa fa-book fa-fw"></i>Books<span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li>
+                                <a ui-sref="homepage.categories" ng-click="data.menu.selected='Books:Tech'">Technical Books</a>
+                            </li>
+                            
+                            <li>
+                                <a ui-sref="homepage.categories" ng-click="data.menu.selected='Books:non'">Non-Technical</a>
+                            
+                            </li>
+                        </ul>
+                        <!-- second-level-items -->
+                    </li>
+                    <li>
+                        <a ui-sref="homepage.categories" ng-click="data.menu.selected='Accessories'"><i class="fa fa-headphones fa-fw"></i>Accessories<span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level">
+                            <li>
+                                <a ui-sref="homepage.categories" ng-click="data.menu.selected='Accessories:Mobile'">Mobile Accessories</a>
+                            </li>
+                            <li>
+                                <a ui-sref="homepage.categories" ng-click="data.menu.selected='Accessories:Laptop'">Laptop Accessories</a>
+                            </li>
+                        </ul>
+                        <!-- second-level-items -->
+                    </li>
+                <li>
+                        <a ui-sref="homepage.categories" ng-click="data.menu.selected='Vehicles'">Vehicles</a>
+                 </li>
+                <li>
+                    <a ui-sref="homepage.categories" ng-click="data.menu.selected='Others'">Others</a>
+                </li>
+               <li>
+                    <a></a>
+                </li>
+                <li>
+                    <a></a>
+                </li>
+                <li>
+                    <a></a>
+                </li>
+                </ul>
+                   
+                
+                <!-- end side-menu -->
+            </div>
+            <!-- end sidebar-collapse -->
+        </nav>
+<ui-view>
+
+</ui-view>
+
+</div>

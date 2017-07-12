@@ -1,0 +1,55 @@
+
+    <div class="container">
+       
+        <div class="row">
+          
+          </div>
+            <div class="col-md-4 col-md-offset-4">
+                <div class="login-panel panel panel-default">                  
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Please Create your account</h3>
+                    </div>
+                    <div class="panel-body">
+                        <form role="form">
+                            <fieldset>
+                                <div class="form-group">
+                                <input  class="form-control" placeholder="Enter Name" type="text" ng-model="w.psn.name" autofocus>
+                                </div>
+                                <div class="form-group">
+                                <input  class="form-control" type="mail" placeholder="Enter mail" ng-model="w.psn.mail">    
+                                </div>
+                               <div class="form-group">
+                                <input  class="form-control" type="password" placeholder="Password" ng-model="w.psn.password1">    
+                                </div>
+                                <div class="form-group">
+                                <input  class="form-control" type="password" placeholder="Re-enter Password" ng-model="w.psn.password">    
+                                </div>
+                            <span  style="border-radius:10px" ng-if="(w.psn.password!=w.psn.password1 && w.psn.password1 && w.psn.password)" class="list-group-item list-group-item-danger">Password is not matching!!</span> 
+                            
+                            <button class="btn btn-info btn-block" ng-click="w.psn.name && w.psn.mail && w.psn.password && w.psn.password1 && w.create(w.psn)">Create Account</button>
+
+          
+                              <ul role="separator" class="divider"></ul>
+                              <div class="row"> 
+                              <button class="btn  btn-danger" ng-click="w.signupgoogle()"><i class="fa fa-google-plus" aria-hidden="true" ></i>Google Signup</button>
+                              <button class="btn  btn-primary" ng-click="w.signupfacebook()"><i class="fa fa-facebook" aria-hidden="true"></i>Facebook Signup</button>
+
+                              
+                              </div>
+                                <!-- Change this to a button or input when using this as a form -->
+                             Already have a account <a ui-sref="login">click here</a>                              
+
+
+
+
+
+
+
+
+                            </fieldset>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>

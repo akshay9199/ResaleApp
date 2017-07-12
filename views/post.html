@@ -1,0 +1,89 @@
+<div ng-controller="AdCtrl as data">
+<div class="content-section-a">
+    
+<table style="width:100%">
+
+<h1 style="margin-left:30%">Place your Ads</h1>
+
+    <form name="form1" ng-submit="form1.$valid && data.submit()">
+<tr>
+    <td>
+   
+    <img src="../images/mobile2.jpg"  style="margin-left:20%; width:150px;height:200px;border:solid black 1px;-webkit-filter: blur(3px);filter: blur(3px)"  alt="post_image">
+     <br><br>
+     <input type="file" name="file" id="file" style="margin-left:20%"  style="display:none" ng-model="data.ads.picture">
+    <br><br>
+    
+    </td>
+ 
+ <td style="margin-left: 50%;">
+     <div class="container">
+        <div>
+            <div>
+              <div>
+                  Name of Product:<input  name="nop" type="text" ng-model="data.ads.nop"  ng-class="{red: data.nop.$prestine}" required>
+                  <p ng-show="form1.nop.$dirty">Enter product Name</p>
+              </div>
+              
+              <br><br>
+
+            </div>
+
+    Select Category:    
+  <select ng-model="data.ads.category"  name="category" required>
+  <option value="" disabled="disabled" selected="selected" >Available Categories</option>
+  <option value="Mobiles:Android">Mobiles:Android</option>
+  <option value="Mobiles:Windows" >Mobiles:Windows</option>
+  <option value="Books:Technical" >Books:Technical</option>
+  <option value="Books:Non-Technical">Books:Non-Technical</option>
+  <option value="Accessories:Mobile" >Accessories:Mobile</option>
+  <option value="Accessories:Laptop" >Accessories:Laptop</option>
+  <option value="Vehicles">Vehicle</option>
+  <option value="Others" >Others</option>
+</select>
+<br>
+<br>
+        Description:  <input type="text" name="description" class="input-lg" ng-model="data.ads.description" required><br><br>
+       
+       <div class='inline'>
+      Select Mode:<input type="radio" name="mode" value="Rent" ng-model="data.ads.mode" required>Rent
+                 <input type="radio" name="mode" value="Sell" selected="selected" ng-model="data.ads.mode" required >  Sell
+      </div>
+<br><br>
+      <div ng-if="data.ads.mode=='Sell'"> 
+        Purchased Price<input type="number"  name="purchasedprice" ng-model="data.ads.purchasedprice" required><br><br>
+        Selling price<input type="number"  name="sellingprice" ng-model="data.ads.sellingprice" required><br><br>
+        
+      </div>
+      <div ng-if="data.ads.mode=='Rent'"> 
+        Rent Charges<input type="number"  name="rentcharges" ng-model="data.ads.rentcharges" required><br><br>
+        Rent Duration(in days)<input type="number"  name="rentduration" ng-model="data.ads.rentduration" required><br><br>
+        
+      </div>
+        Contact:    <input type="number"  name="contact" ng-model="data.ads.contact"  required><br><br>
+         Email:    <input type="email"  name="mail" ng-model="data.ads.mail"  required><br><br>
+        </div>
+        </div>
+    </td>
+     
+    
+</tr>
+</table>
+
+    </form>
+ 
+        <div style="margin-left: 35%">
+        <button ui-sref="homepage" class="btn btn-resonsive btn-lg btn-danger">Cancel</button>
+        <input  class="btn btn-resonsive btn-lg btn-info" type="submit" ng-click=" data.ads.nop && data.ads.category && data.ads.mode && data.ads.contact  && (data.ads.purchasedprice || data.ads.rentcharges) && data.ads.description && data.post(data.ads)">
+<div class="loader" ng-if="data.load==0">   
+<div>
+
+
+
+
+
+
+        </div>
+ 
+        </div>
+        

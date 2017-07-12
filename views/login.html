@@ -1,0 +1,46 @@
+
+    <div class="container">
+       
+        <div class="row">
+          
+          </div>
+            <div class="col-md-4 col-md-offset-4">
+                <div class="login-panel panel panel-default">                  
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Please Sign In</h3>
+                    </div>
+                    <div class="panel-body">
+                        <form role="form">
+                            <fieldset>
+                                <div class="form-group">
+                                    <input class="form-control" placeholder="E-mail" name="email" type="email" autofocus ng-model="w.person.mail">
+                                </div>
+                                <div class="form-group">
+                                    <input class="form-control" placeholder="Password" name="password" type="password" ng-model="w.person.pass">
+                                 </div>
+                              <a ui-sref="forgotpassword">Forgot Password</a>
+                             <span class="row" align="center"><button class="btn btn-primary btn-block" ng-click="w.person.mail &&  w.person.pass && w.signin(w.person)">Login</button></span>
+                             
+          
+                              <ul role="separator" class="divider"></ul>
+                              <div class="row"> 
+                              <button  class="btn btn-danger"  ng-click="w.logingoogle()"><i class="fa fa-google-plus" aria-hidden="true"></i>Google Login</button>
+                              <button class="btn btn-primary" ng-click="w.loginfacebook()"><i class="fa fa-facebook" aria-hidden="true" ></i>Facebook Login</button>
+                              </div>
+                                <!-- Change this to a button or input when using this as a form -->
+                             Don't have a account <a ui-sref="signup">click here</a>                              
+
+
+
+
+
+
+
+
+                            </fieldset>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>

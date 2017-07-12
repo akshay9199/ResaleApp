@@ -1,0 +1,50 @@
+<div ng-controller="showItem as data">
+<div class="content-section-a" style="margin-right:0%; width:83%">
+    
+<table style="width:100%">
+
+<h1 style="margin-left:30%">{{data.ads.category}}</h1>
+
+    
+<tr style="margin-left:20%">
+    <td>
+   
+    <img src="{{data.ads.imageUrl}}"  style="margin-left:20%; width:150px;height:200px;border:solid black 1px;"  alt="post_image">
+
+     <br><br>
+
+
+     <button ui-sref="homepage.categories"  style="margin-left:23%" class="btn btn-info">Back</button>
+    </td>
+ <td style="margin-left: 50%;">
+        <div>
+        <b>Product:</b>{{data.ads.nop}}<br><br> 
+       <span> <b>Description:</b><h6>{{data.ads.description}}</h6><br>  <br></span>
+     <br>  <span ><b>Post published on:</b>{{data.ads.dop}}<br><br> </span>  
+        </div>
+    <div ng-if="data.ads.mode=='Rent'">
+     <b>Rent Charges:</b>{{data.ads.rentcharges}}<br><br>
+     <b>Rent Duration(in days):</b>{{data.ads.rentduration}}
+    </div>
+    <div ng-if="data.ads.mode=='Sell'">
+    <b>Purchased Price:</b>{{data.ads.purchasedprice}}<br><br>
+    <b>Selling Price:</b>{{data.ads.sellingprice}}<br><br>
+    <b>Price slashed upto:</b><strong class="color:red;" step="0.01">{{100-(data.ads.purchasedprice-data.ads.sellingprice)/data.ads.purchasedprice*100 | number : 2}}%</strong> <br> <br>   
+    </div>
+    
+    
+    <span  style="margin-right:50%;" class="list-group-item list-group-item-success">Available on {{data.ads.mode}} </span><br>
+   
+ <h4>Meet Seller</h4>
+    <b>Name<b><br>
+    <b>Contact:</b>{{data.ads.contact}}<br>
+    <b>Mail</b><i class="fa fa-envelope fa-fw"></i>{{data.ads.mail}}<br>
+    <br><br><br>
+        </div>
+        
+    </td>
+
+</tr>
+</table>
+</div>
+    

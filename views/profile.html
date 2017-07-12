@@ -1,0 +1,48 @@
+ <div class="content-section-a" ng-controller="Proofile as f">
+    <div class="container"  style="margin-right:0%; width:83%;height:100%;overflow:scroll;" >
+ 
+
+<table style="width:100%">
+<tr>
+    <h1>Your Profile</h1>
+    <td ><img src="{{f.profilepic}}" class="img-circle" style="width:150px;border-radius:50%" alt=""></td>
+        
+    <td style="width:70%;margin-right:60%">
+    <h3>{{f.name}}</h3>
+    <h4>Email: {{f.email}}</h4>
+
+    <h4>Number of Ads published: {{f.sadds.length}}</h4>
+    </td>
+</tr>
+</table>
+
+<div>
+<div  style="margin-right:10%;margin-left:0%;margin-top:1%;width:70%;" class="list-group-item list-group-item-success">
+{{aj.category}}
+<div style="float:right;">
+<button class="btn  btn-info" ng-click="aj.view(aj.sadds)">Edit</button>
+<button class="btn btn-danger" ng-click="aj.delete(aj.sadds)">Delete</button>
+</div>
+</div>
+
+
+</div>
+
+
+
+
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+</div>
+</div>
