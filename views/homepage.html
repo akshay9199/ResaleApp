@@ -1,4 +1,4 @@
-<div >
+<div>
 <nav class="navbar navbar-inverse navbar-fixed-top navbar-collapse" style=" border-radius:10px">
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
@@ -18,7 +18,7 @@
       <form class="navbar-form navbar-left">
            
             <button ui-sref="homepage.post" class="btn  btn-responsive btn-lg btn-info"> Post Ads</button>
-            <input type="text" placeholder="Search Category" ng-model="data.category">
+            <input type="text" placeholder="Search Category" ng-model="data.textsearch">
       </form>
       <ul class="nav navbar-nav navbar-right">
       
@@ -26,7 +26,7 @@
       
       <ul class="nav navbar-nav navbar-right">
         <li class="dropdown">
-          <span class="caret dropdown-toogle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"  class="img-circle img-responsive" style="width:40px;height:40px;border-radius:40%"><img src="{{data.$rootScope.gather.user.imageUrl}}" style="width:40px;height:40px;border-radius:40%"></span>
+          <span class="caret dropdown-toogle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"  class="img-circle img-responsive" style="width:40px;height:40px;border-radius:40%"><img src="{{data.person.profilepic}}" style="width:40px;height:40px;border-radius:40%"></span>
           <ul class="dropdown-menu">
             <li><a ui-sref="homepage.profile">Profile</a></li>
             <li role="separator" class="divider"></li>
@@ -47,8 +47,10 @@
           </ul>
         </li>
       </ul>
-    </div>
+
     </li>   
+      </ul>
+     </div>
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
@@ -62,51 +64,51 @@
                 <!-- side-menu -->
                 <ul class="nav" id="side-menu">
                     <li>
-                        <a ui-sref="homepage.categories" ui-sref-active="active" ng-click="data.menu.selected='' ">All Categories</a>
+                        <a ui-sref="homepage.categories" ui-sref-active="active" ng-click="data.all.selected=''" >All Categories</a>
                     </li>
                     <li>
-                        <a ui-sref="homepage.categories" ng-click="data.menu.selected ='Mobiles'"><i class="fa fa-mobile fa-fw" ></i> Mobiles<span class="fa arrow"></span></a>
+                        <a ui-sref="homepage.categories" ng-click="data.all.selected='Mobiles'"><i class="fa fa-mobile fa-fw" ></i> Mobiles<span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">
                             <li>
-                                <a ui-sref="homepage.categories" ng-click="data.menu.selected='Mobile:Android'">Android</a>
+                                <a ng-click="data.all.selected='Android'">Android</a>
                             </li>
                             <li>
-                                <a ui-sref="homepage.categories" ng-click="data.menu.selected='Mobile:Windows'">Windows</a>
+                                <a ng-click="data.all.selected='Windows'">Windows</a>
                             </li>
                         </ul>
                         <!-- second-level-items -->
                     </li>
                     <li>
-                        <a ui-sref="homepage.categories" ng-click="data.menu.selected='Books'"><i class="fa fa-book fa-fw"></i>Books<span class="fa arrow"></span></a>
+                        <a ng-click="data.all.selected='Books'"><i class="fa fa-book fa-fw"></i>Books<span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">
                             <li>
-                                <a ui-sref="homepage.categories" ng-click="data.menu.selected='Books:Tech'">Technical Books</a>
+                                <a ng-click="data.all.selected='Books:Tech'">Technical Books</a>
                             </li>
                             
                             <li>
-                                <a ui-sref="homepage.categories" ng-click="data.menu.selected='Books:non'">Non-Technical</a>
+                                <a ui-sref="homepage.categories" ng-click="data.all.selected='Books:Non'">Non-Technical</a>
                             
                             </li>
                         </ul>
                         <!-- second-level-items -->
                     </li>
                     <li>
-                        <a ui-sref="homepage.categories" ng-click="data.menu.selected='Accessories'"><i class="fa fa-headphones fa-fw"></i>Accessories<span class="fa arrow"></span></a>
+                        <a ui-sref="homepage.categories" ng-click="data.all.selected='Accessories'"><i class="fa fa-headphones fa-fw"></i>Accessories<span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">
                             <li>
-                                <a ui-sref="homepage.categories" ng-click="data.menu.selected='Accessories:Mobile'">Mobile Accessories</a>
+                                <a ui-sref="homepage.categories" ng-click="data.all.selected='Accessories:Mobile'">Mobile Accessories</a>
                             </li>
                             <li>
-                                <a ui-sref="homepage.categories" ng-click="data.menu.selected='Accessories:Laptop'">Laptop Accessories</a>
+                                <a ui-sref="homepage.categories" ng-click="data.all.selected='Accessories:Laptop'">Laptop Accessories</a>
                             </li>
                         </ul>
                         <!-- second-level-items -->
                     </li>
                 <li>
-                        <a ui-sref="homepage.categories" ng-click="data.menu.selected='Vehicles'">Vehicles</a>
+                        <a ui-sref="homepage.categories" ng-click="data.all.selected='Vehicles'">Vehicles</a>
                  </li>
                 <li>
-                    <a ui-sref="homepage.categories" ng-click="data.menu.selected='Others'">Others</a>
+                    <a ui-sref="homepage.categories" ng-click="data.all.selected='Others'">Others</a>
                 </li>
                <li>
                     <a></a>

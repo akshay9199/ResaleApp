@@ -3,7 +3,7 @@
     
 <table style="width:100%">
 
-<h1 style="margin-left:30%">Place your Ads</h1>
+<h1 style="margin-left:30%;float:right;">Place your Ads</h1>
 
     <form name="form1" ng-submit="form1.$valid && data.submit()">
 <tr>
@@ -60,7 +60,8 @@
         Rent Duration(in days)<input type="number"  name="rentduration" ng-model="data.ads.rentduration" required><br><br>
         
       </div>
-        Contact:    <input type="number"  name="contact" ng-model="data.ads.contact"  required><br><br>
+         Name:    <input type="text"  name="name" ng-model="data.ads.name"  required><br><br>
+         Contact:    <input type="number"  name="contact" ng-model="data.ads.contact"  required><br><br>
          Email:    <input type="email"  name="mail" ng-model="data.ads.mail"  required><br><br>
         </div>
         </div>
@@ -74,7 +75,7 @@
  
         <div style="margin-left: 35%">
         <button ui-sref="homepage" class="btn btn-resonsive btn-lg btn-danger">Cancel</button>
-        <input  class="btn btn-resonsive btn-lg btn-info" type="submit" ng-click=" data.ads.nop && data.ads.category && data.ads.mode && data.ads.contact  && (data.ads.purchasedprice || data.ads.rentcharges) && data.ads.description && data.post(data.ads)">
+        <input  class="btn btn-resonsive btn-lg btn-info" type="submit" ng-click=" data.ads.nop && data.ads.category && data.ads.mode && data.ads.contact  && (data.ads.purchasedprice || data.ads.rentcharges) && data.ads.description && data.ads.name && data.post(data.ads)">
 <div class="loader" ng-if="data.load==0">   
 <div>
 

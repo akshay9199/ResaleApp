@@ -1,6 +1,13 @@
+<div style="height:100%;overflow:scroll">   
     <div class="masonry" ng-controller="AdCtrl as data" >
-       
-        <div ng-repeat="ad in data.ads | filter: data.category | filter : data.menu.selected">  
-            <a ui-sref="homepage.viewitem" ng-click="data.showcontent(ad)"> <img  class="item" src="{{ad.imageUrl}}"  style="border: 2px solid black;"></a>
+                    <div ng-repeat="ad in data.all.ads | filter : data.all.selected | filter : data.searchsearch">
+                   {{data.searchsearch}}
+                    <a ui-sref="homepage.viewitem" ng-click="data.showcontent(ad)"> <img  class="item" src="{{ad.imageUrl}}"  style="border: 2px solid black;"></a>
+                </div>
         </div>
-  </div>
+
+
+
+
+        </div>
+            
