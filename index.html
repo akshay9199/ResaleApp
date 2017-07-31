@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <html ng-app="myapp">
 <head>
 
@@ -215,4 +216,223 @@ div.tab button.active {
 </ui-view>    
 </body>    
     
+=======
+<html ng-app="myapp">
+<head>
+
+ <link href="css/bootstrap.css" rel="stylesheet" />
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" />
+    <link href="css/main-style.css" rel="stylesheet" />
+    <script src="scripts/jquery-1.10.2.js"></script>
+    <script src="scripts/bootstrap.min.js"></script>
+    <script src="scripts/jquery.metisMenu.js"></script>
+    <script src="scripts/pace.js"></script>
+    <script src="scripts/siminta.js"></script>
+    <script src="scripts/masonry.pkgd.js"></script>
+    <script src="node_modules/angular/angular.js"></script>
+    <script src="node_modules/firebase/firebase.js"></script>
+    <script src="node_modules/angularfire/dist/angularfire.js"></script>
+    <script src="node_modules/angular-route/angular-route.js"></script>
+    <script src="node_modules/angular-ui-router/release/angular-ui-router.js"></script>
+    <script src="scripts/app.js"></script>
+
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyALpKIHiBnE1qL6zPM9Call5MLEs-nNNiQ",
+    authDomain: "resaleapp.firebaseapp.com",
+    databaseURL: "https://resaleapp.firebaseio.com",
+    projectId: "resaleapp",
+    storageBucket: "resaleapp.appspot.com",
+    messagingSenderId: "1044552705499"
+  };
+  firebase.initializeApp(config);
+</script>
+
+
+   <style>
+ body
+ {
+     margin-top: 62px;
+     background-image: url("images/images.jpg");
+     background-repeat: no-repeat;
+     background-size: contain;
+     background-size: 100%;
+     overflow:scroll;
+ }
+
+.wrapper {
+    width: 95%;
+}
+
+.masonry {
+    margin: 3px 3px 3px 20%;
+    padding: 5px;
+    -moz-column-gap: 1.5em;
+    -webkit-column-gap: 1em;
+    column-gap: 5px;
+
+}
+.content-section-a {
+margin-right:10%;
+margin-left:0%;
+margin-top:0%;
+width:70%;
+float:right;
+border-radius: 5px;
+background-color: #f8f8f8;
+}
+.item {
+    display: inline-block;
+    background:white;
+    padding: 0px 0px 0px 0px;
+    margin: 0 0;
+    width: 100%;
+    
+}
+@media only screen and (min-width: 100px) {
+    .masonry {
+        -moz-column-count: 1;
+        -webkit-column-count: 1;
+        column-count: 1;
+    }
+}
+@media only screen and (min-width: 200px) {
+    .masonry {
+        -moz-column-count: 1;
+        -webkit-column-count: 1;
+        column-count: 1;
+    }
+}
+@media only screen and (min-width: 300px) {
+    .masonry {
+        -moz-column-count: 1;
+        -webkit-column-count: 1;
+        column-count: 1;
+    }
+}
+@media only screen and (min-width: 400px) {
+    .masonry {
+        -moz-column-count: 1;
+        -webkit-column-count: 1;
+        column-count: 1;
+    }
+}
+@media only screen and (min-width: 500px) {
+    .masonry {
+        -moz-column-count: 2;
+        -webkit-column-count: 2;
+        column-count: 2;
+    }
+}
+@media only screen and (min-width: 700px) {
+    .masonry {
+        -moz-column-count: 2;
+        -webkit-column-count: 2;
+        column-count: 2;
+    }
+}
+
+@media only screen and (min-width: 900px) {
+    .masonry {
+        -moz-column-count: 3;
+        -webkit-column-count:3;
+        column-count: 3;
+    }
+}
+
+@media only screen and (min-width: 1100px) {
+    .masonry {
+        -moz-column-count: 4;
+        -webkit-column-count: 4;
+        column-count: 4;
+    }
+}
+
+@media only screen and (min-width: 1280px) {
+    .wrapper {
+        width: 1260px;
+    }
+}
+.nav-second-level
+{
+  color:blue;
+  background-color:lightgreen;
+
+}
+.nav-third-level
+{
+  color:black;
+  background-color:lightpink;
+  
+}
+
+.loader {
+  border: 8px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 8px solid #3498db;
+  width: 60px;
+  height: 60px;
+  -webkit-animation: spin 1s linear infinite;
+  animation: spin 1s linear infinite;
+}
+
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Style the tab */
+div.tab {
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+}
+
+/* Style the buttons inside the tab */
+div.tab button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    font-size: 17px;
+}
+
+/* Change background color of buttons on hover */
+div.tab button:hover {
+    background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+div.tab button.active {
+    background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+    display: none;
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-top: none;
+}
+
+</style>
+ 
+   
+</head>    
+<body>
+<ui-view>
+</ui-view>    
+</body>    
+    
+>>>>>>> 3637a1c63f89cb8b1d70932ab7c608159c50098b
 </html>
