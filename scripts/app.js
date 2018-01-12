@@ -44,6 +44,10 @@ $stateProvider
                   }
           }
       })
+	   .state("adhar",{
+        url:"/adhar",
+        templateUrl : "views/adhar.html",
+    })
       .state("homepage",{
         url:"/homepage",
         templateUrl : "views/homepage.html",
@@ -112,6 +116,8 @@ $stateProvider
                   }
           } 
      })
+	
+	 
       
       .state("homepage.categories",{
           url: "/categories",

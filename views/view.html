@@ -13,16 +13,18 @@
 
      <br><br>
 
-
+      <div class="row">
      <button ui-sref="homepage.categories"  style="margin-left:23%" class="btn btn-info">Back</button>
-    </td>
+     <div class='pm-button' ><a href='https://www.payumoney.com/paybypayumoney/#/51BAC7D8C8A21215B62C5FDD7DC06C38'><img src='https://www.payumoney.com/media/images/payby_payumoney/new_buttons/21.png'  style="margin-left:70%"/></a></div> 
+	 </td></div>
  <td style="margin-left: 50%;">
         <div>
         <b>Product:</b>{{data.ads.nop}}<br><br> 
        <span> <b>Description:</b><h6>{{data.ads.description}}</h6><br>  <br></span>
      <br>  <span ><b>Post published on:</b>{{data.ads.dop}}<br><br> </span>  
         </div>
-    <div ng-if="data.ads.mode=='Rent'">
+  <span  style="margin-right:50%;" class="list-group-item list-group-item-success">Product Certification: <b>{{data.ads.certificate}} </b></span><br>
+  <div ng-if="data.ads.mode=='Rent'">
      <b>Rent Charges:</b>{{data.ads.rentcharges}}<br><br>
      <b>Rent Duration(in days):</b>{{data.ads.rentduration}}
     </div>

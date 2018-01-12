@@ -18,7 +18,7 @@
       <form class="navbar-form navbar-left">
            
             <button ui-sref="homepage.post" class="btn  btn-responsive btn-lg btn-info"> Post Ads</button>
-            <input type="text" placeholder="Search Category" ng-model="data.textsearch">
+            
       </form>
       <ul class="nav navbar-nav navbar-right">
       
@@ -64,6 +64,9 @@
                 <!-- side-menu -->
                 <ul class="nav" id="side-menu">
                     <li>
+					<input type="text" placeholder="Search Category" ng-model="data.all.sel"><button ng-click="data.all.selected='data.all.sel'">Search</button>
+					</li>
+					<li>
                         <a ui-sref="homepage.categories" ui-sref-active="active" ng-click="data.all.selected=''" >All Categories</a>
                     </li>
                     <li>

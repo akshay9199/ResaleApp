@@ -60,7 +60,21 @@
         Rent Duration(in days)<input type="number"  name="rentduration" ng-model="data.ads.rentduration" required><br><br>
         
       </div>
-         Name:    <input type="text"  name="name" ng-model="data.ads.name"  required><br><br>
+	  <br>
+	   <div class='inline'>
+      Product Certification:
+	  <input type="radio" name="mode" value="yes" ng-model="data.ads.certificate">Enable
+      <input type="radio" name="mode" value="no" ng-model="data.ads.certificate">Disable
+      </div>
+	  
+	  <div ng-if="data.ads.certificate=='yes'">
+	  <span  style="margin-right:50%;" class="list-group-item list-group-item-success">Since you have enabled Product Certification. Service charges may apply but delivery service provided.</span><br>
+	  </div>
+       <div ng-if="data.ads.certificate=='no'">
+	  <span  style="margin-right:50%;" class="list-group-item list-group-item-success">Since you have disabled Product Certification. We won't assure product quality.</span><br>
+	  </div>    
+
+	  Name:    <input type="text"  name="name" ng-model="data.ads.name"  required><br><br>
          Contact:    <input type="number"  name="contact" ng-model="data.ads.contact"  required><br><br>
          Email:    <input type="email"  name="mail" ng-model="data.ads.mail"  required><br><br>
         </div>
